@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>mvc1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- MemberFrontController에서 copy qulified~를 선택하고 붙여넣기, /를 .으로 변환 -->
+  <servlet>
+    <!-- servlet 매핑을 서로 걸어줌 -->
+  	<servlet-name>MemberFrontController</servlet-name>
+  	<servlet-class>kr.mem.controller.MemberFrontController</servlet-class>
+  </servlet>
+  
+  <!-- .do로 끝나는 요청이 오면 Front컨트롤러가 모든 명령을 받겠다고 설정 -->
+  <servlet-mapping>
+  	<servlet-name>MemberFrontController</servlet-name>
+  	<url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
